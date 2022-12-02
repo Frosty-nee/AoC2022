@@ -5,6 +5,7 @@
 #include <string>
 #include <format>
 #include "day_1.h"
+#include "day_2.h"
 
 using namespace std;
 
@@ -25,5 +26,8 @@ int main(int argc, char *argv[]) {
 		cin >> day;
 		cout << day + "\n";
 	}
-	cout << day_1_output(load_raw("day_1_input.txt"));
+	std::vector<int> solutions = day_2_output(load_raw("day_2_input.txt"));
+	for (int i : solutions) {
+		printf("%i\n", i);
+	}
 }

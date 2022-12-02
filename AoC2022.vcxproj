@@ -130,12 +130,15 @@
   <ItemGroup>
     <ClCompile Include="AoC2022.cpp" />
     <ClCompile Include="day_1.cpp" />
+    <ClCompile Include="day_2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="day_1.h" />
+    <ClInclude Include="day_2.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="day_1_input.txt" />
+    <Text Include="day_2_input.txt" />
+    <Text Include="day_2_test.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
