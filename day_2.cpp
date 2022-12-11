@@ -14,6 +14,7 @@ std::map<char, char> victory_map = {
 
 int score_p1(std::string s) {
 	// I could be doing this with math but I suck at math
+	// too bad I realized how do to this with math after I solved it already fuck
 	char oplay = s[0];
 	char meplay = s[2] - 23;
 	int score = meplay % 64;
