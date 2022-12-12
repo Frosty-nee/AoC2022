@@ -7,6 +7,7 @@
 #include "day_1.h"
 #include "day_2.h"
 #include "day_3.h"
+#include "day_4.h"
 
 using namespace std;
 
@@ -27,7 +28,7 @@ int main(int argc, char *argv[]) {
 		cin >> day;
 		cout << day + "\n";
 	}
-	std::vector<int> solutions = day_3_output(load_raw("day_3_input.txt"));
+	std::vector<int> solutions = day_4_output(load_raw("day_4_input.txt"));
 	for (int i : solutions) {
 		printf("%i\n", i);
 	}
