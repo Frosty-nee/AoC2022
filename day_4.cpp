@@ -19,7 +19,6 @@ std::vector<std::vector<int>> process_input(std::vector<std::string> raw_input) 
 		elf_pair.push_back(stoi(elves[1].substr(0, elves[1].find("-"))));
 		elf_pair.push_back(stoi(elves[1].substr(elves[1].find("-") + 1, elves[1].size())));
 		procinp.push_back(elf_pair);
-		std::cout << std::format("{}-{}, {}-{}\n", elf_pair[0], elf_pair[1], elf_pair[2], elf_pair[3]);
 	}
 	return procinp;
 }
