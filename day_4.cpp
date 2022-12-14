@@ -6,7 +6,7 @@
 
 #include "day_4.h"
 
-std::vector<std::vector<int>> process_input(std::vector<std::string> raw_input) {
+std::vector<std::vector<int>> process_input(const std::vector<std::string>& raw_input) {
 	std::vector<std::vector<int>> procinp;
 	for (std::string s : raw_input) {
 		std::vector<int> elf_pair;
@@ -23,7 +23,7 @@ std::vector<std::vector<int>> process_input(std::vector<std::string> raw_input) 
 	return procinp;
 }
 
-int solve_p1(std::vector<std::vector<int>> procinp) {
+int solve_p1(std::vector<std::vector<int>>& procinp) {
 	int ret = 0;
 	for (std::vector<int> vec : procinp) {
 		if ((vec[0] <= vec[2] && vec[1] >= vec[3]) || (vec[2] <= vec[0] && vec[3] >= vec[1])) {
@@ -33,7 +33,7 @@ int solve_p1(std::vector<std::vector<int>> procinp) {
 	return ret;
 }
 
-int solve_p2(std::vector<std::vector<int>> procinp) {
+int solve_p2(std::vector<std::vector<int>>& procinp) {
 	int ret = 0;
 	for (std::vector<int> vec : procinp) {
 		if (vec[0] >= vec[2] && vec[0] <= vec[3]) ret++;
@@ -44,7 +44,7 @@ int solve_p2(std::vector<std::vector<int>> procinp) {
 	return ret;
 }
 
-std::vector<int> day_4_output(std::vector<std::string> raw_input) {
+std::vector<int> day_4_output(const std::vector<std::string>& raw_input) {
 	std::vector<int> ret;
 	std::vector<std::vector<int>> procinp = process_input(raw_input);
 	ret.push_back(solve_p1(procinp));

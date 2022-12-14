@@ -4,5 +4,5 @@
 #include <string>
 #include <vector>
 
-std::string day_1_output(std::vector<std::string> raw_input);
+std::vector<int> day_1_output(const std::vector<std::string>& raw_input);
 #endif

@@ -141,6 +141,7 @@
     <ClInclude Include="day_4.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="day_1_input.txt" />
     <Text Include="day_2_input.txt" />
     <Text Include="day_2_test.txt" />
     <Text Include="day_3_input.txt" />

@@ -10,7 +10,7 @@
 #include "day_4.h"
 
 
-std::vector<std::string> load_raw(std::string f) {
+std::vector<std::string> load_raw(const std::string& f) {
 	std::ifstream infile(f);
 	std::string line;
 	std::vector<std::string> ret;
@@ -21,14 +21,9 @@ std::vector<std::string> load_raw(std::string f) {
 }
 
 int main(int argc, char *argv[]) {
-	if (argc <= 1) {
-		int day;
-		std::cout << "input day: ";
-		std::cin >> day;
-		std::cout << day + "\n";
-	}
-	std::vector<int> solutions = day_4_output(load_raw("day_4_input.txt"));
-	for (int i : solutions) {
+	std::vector<std::string> raw_input = load_raw("day_1_input.txt");
+	std::vector<int> solutions = day_1_output(raw_input);
+	for ( const int& i : solutions) {
 		printf("%i\n", i);
 	}
 }

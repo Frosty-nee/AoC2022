@@ -8,7 +8,7 @@
 
 std::string ascii_letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-std::vector<std::vector<std::set<char>>> process_input(std::vector<std::string> raw_input) {
+std::vector<std::vector<std::set<char>>> process_input(const std::vector<std::string>& raw_input) {
 	std::vector<std::vector<std::set<char>>> procinp;
 	for (std::string s : raw_input) {
 		std::vector<std::set<char>> row;
@@ -29,7 +29,7 @@ std::vector<std::vector<std::set<char>>> process_input(std::vector<std::string> 
 	return procinp;
 }
 
-int score_item(char c) {
+int score_item(char& c) {
 	if (c >= 97) {
 		return c - 96 ;
 	}
@@ -41,7 +41,7 @@ int score_item(char c) {
 	}
 }
 
-int solve_p1(std::vector<std::vector<std::set<char>>> procinp) {
+int solve_p1(std::vector<std::vector<std::set<char>>>& procinp) {
 	int sum = 0;
 	for (std::vector backpack : procinp) {
 		for (char letter : ascii_letters) {
@@ -54,7 +54,7 @@ int solve_p1(std::vector<std::vector<std::set<char>>> procinp) {
 	return sum;
 }
 
-int solve_p2(std::vector<std::vector<std::set<char>>> procinp) {
+int solve_p2(std::vector<std::vector<std::set<char>>>& procinp) {
 	int sum = 0;
 	for (int i = 2; i <= procinp.size(); i += 3) {
 		std::set<char> elves [3];
@@ -76,7 +76,7 @@ int solve_p2(std::vector<std::vector<std::set<char>>> procinp) {
 	return sum;
 }
 
-std::vector<int> day_3_output(std::vector<std::string> raw_input) {
+std::vector<int> day_3_output(const std::vector<std::string>& raw_input) {
 	std::vector<int> ret;
 	std::vector<std::vector<std::set<char>>> procinp = process_input(raw_input);
 	ret.push_back(solve_p1(procinp));
