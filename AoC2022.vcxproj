@@ -139,7 +139,6 @@
     <ClInclude Include="day_2.h" />
     <ClInclude Include="day_3.h" />
     <ClInclude Include="day_4.h" />
-    <ClInclude Include="solutions.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="day_2_input.txt" />

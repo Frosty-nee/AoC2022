@@ -44,9 +44,6 @@
     <ClInclude Include="day_4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="solutions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="day_2_input.txt">
